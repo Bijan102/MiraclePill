@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var nameLbl: UILabel!
+    
+    @IBOutlet weak var nameTxt: UITextField!
+ 
+    @IBOutlet weak var streetLbl: UILabel!
+    
+    @IBOutlet weak var streetTxt: UITextField!
+    
+    @IBOutlet weak var cityTxt: UITextField!
+    
+    @IBOutlet weak var stateLbl: UILabel!
+    
+    
+    @IBOutlet weak var cityLbl: UILabel!
     
     
     @IBOutlet weak var statePicker: UIPickerView!
@@ -21,8 +35,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var zipCodeLbl: UILabel!
     @IBOutlet weak var zipCodeTxt: UITextField!
     
-    @IBAction func btnSubmit(_ sender: AnyObject) {
-    }
+    @IBOutlet weak var btnOutlet: UIButton!
+    
+    @IBOutlet weak var success: UIImageView!
+    
     
     let states = ["Alaska", "Alabama", "California", "Maine", "New York"];
     
@@ -30,7 +46,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
         statePicker.dataSource = self;
         statePicker.delegate = self;
-        self.view.backgroundColor = UIColor.cyan
+        self.view.backgroundColor = UIColor.gray
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +61,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryTxt.isHidden = true;
         zipCodeLbl.isHidden = true;
         zipCodeTxt.isHidden = true;
+        btnOutlet.isHidden = true;
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -68,8 +85,28 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryTxt.isHidden = false;
         zipCodeLbl.isHidden = false;
         zipCodeTxt.isHidden = false;
+        btnOutlet.isHidden = false;
     }
     
+    @IBAction func btnSubmit(_ sender: AnyObject) {
+        //Hide countryLbl, countryTxtField, zipCodeLbl, and zipCodeTxt when statePicker is selected
+        countryLbl.isHidden = true;
+        countryTxt.isHidden = true;
+        zipCodeLbl.isHidden = true;
+        zipCodeTxt.isHidden = true;
+        btnOutlet.isHidden = true;
+        statePicker.isHidden = true;
+        statePickerBtn.isHidden = true;
+        success.isHidden = false;
+        nameLbl.isHidden = true;
+        nameTxt.isHidden = true;
+        streetLbl.isHidden = true;
+        streetTxt.isHidden = true;
+        cityLbl.isHidden = true;
+        cityTxt.isHidden = true;
+        stateLbl.isHidden = true;
+        
+    }
     
 }
 

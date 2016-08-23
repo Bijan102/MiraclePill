@@ -106,7 +106,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your city..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E9O-8N-lju">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your city..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E9O-8N-lju">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BJc-0Z-7BF"/>
                                 </constraints>
@@ -130,12 +130,12 @@
                                     <constraint firstAttribute="height" constant="155" id="pAb-O8-YhU"/>
                                 </constraints>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your country..." borderStyle="roundedRect" placeholder="Enter your city..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLb-la-FC8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your country..." borderStyle="roundedRect" placeholder="Enter your city..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLb-la-FC8">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your zip code..." borderStyle="roundedRect" placeholder="Enter your city..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9Y-qL-D7g">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your zip code..." borderStyle="roundedRect" placeholder="Enter your city..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9Y-qL-D7g">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -146,6 +146,7 @@
                                     <action selector="btnSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o71-TO-DNT"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="Ul4-DF-hXU"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -161,10 +162,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="MpL-pe-Pbh" secondAttribute="trailing" constant="80" id="Fap-QX-OzJ"/>
                             <constraint firstItem="PE0-uV-1xl" firstAttribute="trailing" secondItem="NKj-C1-laq" secondAttribute="trailing" id="FbH-gJ-Cq4"/>
                             <constraint firstItem="E9O-8N-lju" firstAttribute="leading" secondItem="PE0-uV-1xl" secondAttribute="leading" id="FpV-GT-mJB"/>
+                            <constraint firstItem="Ul4-DF-hXU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="FyI-N4-u5n"/>
                             <constraint firstItem="o9Y-qL-D7g" firstAttribute="leading" secondItem="UCj-kt-I1S" secondAttribute="leading" id="GP9-S1-7VE"/>
                             <constraint firstItem="tqc-NJ-Tev" firstAttribute="top" secondItem="ZDb-ml-KtJ" secondAttribute="bottom" constant="14" id="Gdj-Z2-7Hh"/>
                             <constraint firstItem="E9O-8N-lju" firstAttribute="top" secondItem="PE0-uV-1xl" secondAttribute="bottom" constant="8" id="IIH-1K-Low"/>
                             <constraint firstItem="NKj-C1-laq" firstAttribute="top" secondItem="LaN-Mi-Xgu" secondAttribute="bottom" constant="8" id="IbP-SM-HGU"/>
+                            <constraint firstItem="Ul4-DF-hXU" firstAttribute="centerX" secondItem="iIf-yB-Csl" secondAttribute="centerX" id="JPU-gu-KHw"/>
                             <constraint firstItem="dP9-dD-Q5h" firstAttribute="centerX" secondItem="9b4-6n-ga4" secondAttribute="centerX" id="Loe-rP-9cR"/>
                             <constraint firstItem="PE0-uV-1xl" firstAttribute="top" secondItem="NKj-C1-laq" secondAttribute="bottom" constant="8" id="N4Z-4t-KR4"/>
                             <constraint firstItem="NKj-C1-laq" firstAttribute="trailing" secondItem="LaN-Mi-Xgu" secondAttribute="trailing" id="Ox7-Kj-uQa"/>
@@ -187,10 +190,12 @@
                             <constraint firstItem="CLb-la-FC8" firstAttribute="trailing" secondItem="tqc-NJ-Tev" secondAttribute="trailing" id="fwI-pw-oML"/>
                             <constraint firstItem="FsY-Hu-wf2" firstAttribute="top" secondItem="iIf-yB-Csl" secondAttribute="bottom" constant="10" id="h84-xd-NNH"/>
                             <constraint firstAttribute="trailing" secondItem="FsY-Hu-wf2" secondAttribute="trailing" constant="20" id="hVh-BG-bZi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ul4-DF-hXU" secondAttribute="trailing" constant="80" id="iHI-ca-TGP"/>
                             <constraint firstItem="ZB3-am-Fdi" firstAttribute="top" secondItem="ZDb-ml-KtJ" secondAttribute="bottom" constant="8" id="jgo-iI-txR"/>
                             <constraint firstItem="NKj-C1-laq" firstAttribute="leading" secondItem="LaN-Mi-Xgu" secondAttribute="leading" id="kFp-qq-Ftk"/>
                             <constraint firstItem="9b4-6n-ga4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="kHn-Ds-Sej"/>
                             <constraint firstItem="tqc-NJ-Tev" firstAttribute="leading" secondItem="Lbc-bB-KzI" secondAttribute="leading" id="kbD-jd-o3R"/>
+                            <constraint firstItem="Ul4-DF-hXU" firstAttribute="top" secondItem="EfZ-LN-BWZ" secondAttribute="bottom" constant="24" id="lEf-2G-YkH"/>
                             <constraint firstItem="UCj-kt-I1S" firstAttribute="leading" secondItem="CLb-la-FC8" secondAttribute="leading" id="lQb-64-Rh1"/>
                             <constraint firstItem="FsY-Hu-wf2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="oR2-xT-8FE"/>
                             <constraint firstItem="Lbc-bB-KzI" firstAttribute="trailing" secondItem="E9O-8N-lju" secondAttribute="trailing" id="oYI-uE-smA"/>
@@ -204,10 +209,19 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnOutlet" destination="MpL-pe-Pbh" id="tIu-8j-04n"/>
+                        <outlet property="cityLbl" destination="PE0-uV-1xl" id="Gau-ul-Pki"/>
+                        <outlet property="cityTxt" destination="E9O-8N-lju" id="9lT-Rb-4tW"/>
                         <outlet property="countryLbl" destination="tqc-NJ-Tev" id="xTR-nS-Cf6"/>
                         <outlet property="countryTxt" destination="CLb-la-FC8" id="le0-4y-hdq"/>
+                        <outlet property="nameLbl" destination="wcj-R3-bkH" id="bJU-th-YYT"/>
+                        <outlet property="nameTxt" destination="EfZ-LN-BWZ" id="eRq-Hh-Nzu"/>
+                        <outlet property="stateLbl" destination="Lbc-bB-KzI" id="id9-Tc-gWU"/>
                         <outlet property="statePicker" destination="ZB3-am-Fdi" id="xX2-tu-Zm6"/>
                         <outlet property="statePickerBtn" destination="ZDb-ml-KtJ" id="SdD-BN-NxP"/>
+                        <outlet property="streetLbl" destination="LaN-Mi-Xgu" id="kFY-gs-FBG"/>
+                        <outlet property="streetTxt" destination="NKj-C1-laq" id="4PR-0N-LHH"/>
+                        <outlet property="success" destination="Ul4-DF-hXU" id="Qsy-99-HDI"/>
                         <outlet property="zipCodeLbl" destination="UCj-kt-I1S" id="pLU-4b-23R"/>
                         <outlet property="zipCodeTxt" destination="o9Y-qL-D7g" id="Kuf-mr-jaQ"/>
                     </connections>
@@ -220,5 +234,6 @@
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
