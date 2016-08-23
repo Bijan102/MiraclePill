@@ -15,13 +15,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
     
+    @IBOutlet weak var countryLbl: UILabel!
+    @IBOutlet weak var countryTxt: UITextField!
+    
+    @IBOutlet weak var zipCodeLbl: UILabel!
+    @IBOutlet weak var zipCodeTxt: UITextField!
+    
+    @IBAction func btnSubmit(_ sender: AnyObject) {
+    }
+    
     let states = ["Alaska", "Alabama", "California", "Maine", "New York"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
         statePicker.dataSource = self;
         statePicker.delegate = self;
-        self.view.backgroundColor = UIColor.purple
+        self.view.backgroundColor = UIColor.cyan
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +40,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBAction func stateBtnPressed(_ sender: AnyObject) {
         statePicker.isHidden = false;
+        //Hide countryLbl, countryTxtField, zipCodeLbl, and zipCodeTxt when statePicker is selected
+        countryLbl.isHidden = true;
+        countryTxt.isHidden = true;
+        zipCodeLbl.isHidden = true;
+        zipCodeTxt.isHidden = true;
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -48,6 +62,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         statePickerBtn.setTitle(states[row], for: UIControlState()); //UIControlState.normal
         statePicker.isHidden = true;
+        
+        //Display countryLbl, countryTxtField, zipCodeLbl, and zipCodeTxt when statePicker is selected
+        countryLbl.isHidden = false;
+        countryTxt.isHidden = false;
+        zipCodeLbl.isHidden = false;
+        zipCodeTxt.isHidden = false;
     }
+    
+    
 }
 
